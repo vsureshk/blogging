@@ -1,0 +1,16 @@
+
+<b>Users</b>
+ 
+<ul id="users">
+<% @users.each do |user| %>
+  <%= render user %>
+<% end %>
+</ul>
+ 
+<br>
+ 
+<%= form_for(@user, remote: true) do |f| %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>
