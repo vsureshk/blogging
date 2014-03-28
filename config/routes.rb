@@ -1,4 +1,5 @@
 Blog::Application.routes.draw do
+  devise_for :users
   get "users/index"
   get "users/create"
   get "welcome/index"
@@ -28,16 +29,16 @@ Blog::Application.routes.draw do
   #   resources :products
 
   # Example resource route with options:
-  #   resources :products do
+     resources :welcome do
   #     member do
   #       get 'short'
   #       post 'toggle'
   #     end
   #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
+       collection do
+         get 'search'
+       end
+     end
 
   # Example resource route with sub-resources:
   #   resources :products do

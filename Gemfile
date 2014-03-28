@@ -46,3 +46,15 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+#authentication
+
+gem 'devise'
+gem 'factory_girl_rails', group: :development
+gem 'spreadsheet'
+
+group :development,:test do
+	gem 'rspec-rails', '~> 3.0.0.beta'
+end
+
+gem 'money-rails'	 
