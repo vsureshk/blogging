@@ -1,0 +1,6 @@
+ruby console.rb
+>
+
+Run the following line, Its enough to run your crawler
+
+  => c = Crawler.new("website-url", [["username1","password1"], ["username2","password2"]])

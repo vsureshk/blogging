@@ -1,0 +1,21 @@
+
+#creating the database for first time for development
+mysql -uroot -h localhost -p
+
+show databases;
+create database __forms;
+create database __loanapps;
+create database __surveys;
+create database __tomn;
+
+
+mysql -u root -h localhost -p __forms < db_forms.sql
+mysql -u root -h localhost -p __loanapps < db_loanapps.sql
+mysql -u root -h localhost  -p __surveys < db_surveys.sql
+mysql -u root -h localhost -p __tomn < db_tomn.sql
+
+# taking the dump with just the database structure with no data
+mysqldump -u root -h localhost --no-data -p __forms > db_forms.sql
+mysqldump -u root -h localhost --no-data -p __loanapps > db_loanapps.sql
+mysqldump -u root -h localhost --no-data -p __surveys > db_surveys.sql
+mysqldump -u root -h localhost --no-data -p __tomn > db_tomn.sql
